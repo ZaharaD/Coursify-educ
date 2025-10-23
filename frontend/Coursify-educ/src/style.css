@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Test styles pour vérifier que le CSS fonctionne */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+/* Styles de base pour les boutons */
+.btn-primary {
+  background-color: #C52D20;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #991b1b;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #C52D20;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  border: 2px solid #C52D20;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background-color: #C52D20;
+  color: white;
+}
+
+/* Styles pour les cartes */
+.card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Styles pour les badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.badge-primary {
+  background-color: #fef2f2;
+  color: #C52D20;
+}
+
+.badge-success {
+  background-color: #f0fdf4;
+  color: #16a34a;
+}
+
+.badge-warning {
+  background-color: #fefce8;
+  color: #ca8a04;
+}
+
+/* Styles pour les champs de saisie */
+.input-field {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #C52D20;
+  box-shadow: 0 0 0 3px rgba(197, 45, 32, 0.1);
+}
+
+/* Styles pour les barres de progression */
+.progress-bar {
+  width: 100%;
+  background-color: #e5e7eb;
+  border-radius: 8px;
+  height: 12px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #C52D20 0%, #991b1b 100%);
+  border-radius: 8px;
+  transition: width 0.5s ease;
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+/* Styles pour les gradients */
+.gradient-primary {
+  background: linear-gradient(135deg, #C52D20 0%, #991b1b 100%);
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%);
+}
+
+/* Styles responsive */
+@media (max-width: 768px) {
+  .card {
+    padding: 16px;
+  }
+  
+  .btn-primary,
+  .btn-outline {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
