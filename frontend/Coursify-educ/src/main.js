@@ -3,7 +3,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
 import './style.css'
 
-// Import des composants de pages
 import LandingPage from './views/LandingPage.vue'
 import Login from './views/auth/Login.vue'
 import Register from './views/auth/Register.vue'
@@ -13,7 +12,7 @@ import AdminDashboard from './views/dashboard/AdminDashboard.vue'
 import AIAssistant from './views/AIAssistant.vue'
 import TestPage from './views/TestPage.vue'
 
-// Configuration des routes
+
 const routes = [
   {
     path: '/',
