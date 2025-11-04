@@ -11,7 +11,11 @@ import TeacherDashboard from './views/dashboard/TeacherDashboard.vue'
 import AdminDashboard from './views/dashboard/AdminDashboard.vue'
 import AIAssistant from './views/AIAssistant.vue'
 import TestPage from './views/TestPage.vue'
+import QuizzesView from './views/QuizzesView.vue'
 
+// Composants pour les pages statiques
+const TermsOfService = { template: '<div class="container"><h1>Conditions d\'utilisation</h1><p>Contenu des conditions d\'utilisation à compléter.</p></div>' }
+const PrivacyPolicy = { template: '<div class="container"><h1>Politique de confidentialité</h1><p>Contenu de la politique de confidentialité à compléter.</p></div>' }
 
 const routes = [
   {
@@ -53,6 +57,24 @@ const routes = [
     path: '/test',
     name: 'TestPage',
     component: TestPage
+  },
+  {
+    path: '/terms',
+    name: 'Terms',
+    component: TermsOfService,
+    meta: { title: 'Conditions d\'utilisation' }
+  },
+  {
+    path: '/privacy',
+    name: 'Privacy',
+    component: PrivacyPolicy,
+    meta: { title: 'Politique de confidentialité' }
+  },
+  {
+    path: '/quizzes',
+    name: 'Quizzes',
+    component: QuizzesView,
+    meta: { title: 'Quiz' }
   }
 ]
 
